@@ -4,7 +4,8 @@ const validator = require('../validator/index');
 
 const router = express.Router();
 
-router.get('/', getPosts)
+//router.get('/', getPosts)
+router.get('/post/:id', getPosts)
 router.post('/post', createPost)
 router.get('/list', listPosts)
 

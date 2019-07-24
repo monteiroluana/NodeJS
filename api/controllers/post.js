@@ -1,10 +1,10 @@
 const Post = require("../models/post") 
 
-exports.getPosts = (req, res) => {
-    res.json({
-        posts: [{ title: "First post"},{ title: "Second post"}]
-    });
-};
+// exports.getPosts = (req, res) => {
+//     res.json({
+//         posts: [{ title: "First post"},{ title: "Second post"}]
+//     });
+// };
 
 exports.createPost = (req, res) => {
     const post = new Post(req.body);
@@ -28,3 +28,13 @@ exports.listPosts = (req, res) => {
         else{res.json(post);}
     })
 }
+
+exports.getPosts = (req, res) => {
+    Post.findOne({
+        title: req.params.id
+    })
+    .exec( (err, post) => {
+        if(err){res.send('error has occured');}
+        else{res.json(post);}
+    })
+};
