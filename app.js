@@ -1,9 +1,12 @@
 const express = require("express");
 const app = express();
+const morgan = require("morgan");
 
-app.get("/", (req, res) =>{
-    res.send("Hello world from NodeJs");
-});
+// bring in routes
+const { getPosts } = require("./routes/post");
+
+
+app.get("/", getPosts);
 
 const port = 3000;
 app.listen(port, () => {
