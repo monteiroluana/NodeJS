@@ -1,3 +1,5 @@
 exports.getPosts = (req, res) => {
-    res.send("Hello world from NodeJS routes and controllers");
-}
+    res.json({
+        posts: [{ title: "First post"},{ title: "Second post"}]
+    });
+};
