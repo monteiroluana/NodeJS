@@ -1,5 +1,5 @@
 const express = require("express");
-const {getPosts,createPost, listPosts} = require('../controllers/post');
+const {getPosts,createPost, listPosts, putPosts} = require('../controllers/post');
 const validator = require('../validator/index');
 
 const router = express.Router();
@@ -7,6 +7,7 @@ const router = express.Router();
 //router.get('/', getPosts)
 router.get('/post/:id', getPosts)
 router.post('/post', createPost)
-router.get('/list', listPosts)
+router.get('/post', listPosts)
+router.put('/post/:id', putPosts)
 
 module.exports = router;

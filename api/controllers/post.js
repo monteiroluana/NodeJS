@@ -31,10 +31,21 @@ exports.listPosts = (req, res) => {
 
 exports.getPosts = (req, res) => {
     Post.findOne({
-        title: req.params.id
+        _id: req.params.id
     })
     .exec( (err, post) => {
         if(err){res.send('error has occured');}
         else{res.json(post);}
     })
+};
+
+exports.putPosts = (req, res) => {
+    Post.findByIdAndUpdate({
+        _id: req.params.id
+    },{
+        $set: {title:req.body.title}},
+    {upsert:true}, (err, newPost) => {
+        if(err){res.send('error has occured');}
+        else{res.status(204);}
+    });
 };
