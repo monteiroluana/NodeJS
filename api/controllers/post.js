@@ -20,3 +20,11 @@ exports.createPost = (req, res) => {
         })
     });
 };
+
+exports.listPosts = (req, res) => {
+    Post.find({})
+    .exec( (err, post) => {
+        if(err){res.send('error has occured');}
+        else{res.json(post);}
+    })
+}
