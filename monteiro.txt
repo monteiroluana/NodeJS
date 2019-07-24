@@ -1,0 +1,19 @@
+1) npm init
+	package.json - node api
+2) npm install express
+3) touch app.js
+4) npm i nodemon
+	(npm run dev)	
+
+5) npm i morgan
+	(view response method http: get/200 || get/304)
+
+ >> DB
+6) npm i dotenv
+7) npm i mongoose
+
+ >> json response
+8) npm i body-parser
+
+9) npm i express-validator
+
