@@ -1,0 +1,26 @@
+{
+  "name": "nodejs",
+  "version": "1.0.0",
+  "description": "A NodeJS API",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/monteiroluana/NodeJS.git"
+  },
+  "keywords": [
+    "node",
+    "api"
+  ],
+  "author": "Luana Monteiro",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/monteiroluana/NodeJS/issues"
+  },
+  "homepage": "https://github.com/monteiroluana/NodeJS#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
