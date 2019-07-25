@@ -40,7 +40,7 @@ exports.getPosts = (req, res) => {
 };
 
 exports.putPosts = (req, res) => {
-    Post.findByIdAndUpdate({
+    Post.findOneAndUpdate({
         _id: req.params.id
     },{
         $set: {title:req.body.title}},

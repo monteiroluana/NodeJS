@@ -23,3 +23,5 @@
 >> MONGO
 npm install --save express mongoose body-parser
 
+>> POSTGRESQL
+npm i pg
