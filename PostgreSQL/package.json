@@ -1,0 +1,22 @@
+{
+  "name": "postgresql",
+  "version": "1.0.0",
+  "description": "A NodeJs with PostgreSql",
+  "main": "init.js",
+  "scripts": {
+    "dev": "nodemon init.js"
+  },
+  "keywords": [
+    "node",
+    "api"
+  ],
+  "author": "Luana Monteiro",
+  "license": "ISC",
+  "dependencies": {
+    "body-parse": "^0.1.0",
+    "express": "^4.17.1",
+    "nodemon": "^1.19.1",
+    "pg": "^7.12.0",
+    "sequelize": "^5.11.0"
+  }
+}
