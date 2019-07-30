@@ -1,0 +1,12 @@
+{
+    "development": {
+        "dialect": "postgres",
+        "port": 5432,
+        "host": "localhost",
+        "schema": "monteiro",
+        "database": "pg_dev_tereos",
+        "username": "db_poc_tereos_adm",
+        "password": "Pascal2018",
+        "logging": false
+    }
+}
