@@ -1,10 +1,5 @@
-const modelLoader = require('../../utils/modelLoader')
-const routerSetor = require('./routes/usuario')
-
-const models = [ 
-    '../modulos/usuario/model/usuario'
-]
+const routerUsuario = require('./routes/usuario')
 
 exports.init = (app) => {
-    app.use('/', routerSetor)
+    app.use('/', routerUsuario)
 }

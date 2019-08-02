@@ -5,7 +5,6 @@ exports.read = (req, res) => {
     }).then((data) => {
         res.send(data)
     }).catch((error) => {
-        console.log(error)
         res.send(error)
     });
 };
@@ -20,7 +19,6 @@ exports.getByName = (req, res) => {
             res.send("usuário não encontrado em nossa base de dados!")
         }
     }).catch((error) => {
-        console.log(error)
         res.send(error)
     });
 };
@@ -33,8 +31,7 @@ exports.insert = (req, res) => {
         .then((data) => {
             res.send("usuario insert: "+true)
         }).catch((error) => {
-            console.log(error)
-            res.send("usuario insert: "+false)
+            res.send(error)
         })
 }
 
@@ -49,8 +46,7 @@ exports.update = (req, res) => {
         .then((data) => {
             res.send("usuario update: "+true)
         }).catch((error) => {
-            console.log(error)
-            res.send("usuario update: "+false)
+            res.send(error)
         })
 }
 
@@ -65,7 +61,6 @@ exports.delete = (req, res) => {
         .then((rowDeleted) => {
             res.send("usuario delete: "+true)
         }, (err) => {
-            console.log(err)
-            res.send("usuario delete: "+false)
+            res.send(err)
         })
 }
